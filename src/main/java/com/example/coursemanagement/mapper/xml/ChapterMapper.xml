@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.example.coursemanagement.mapper.ChapterMapper">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="com.example.coursemanagement.entity.Chapter">
+        <id column="id" property="id" />
+        <result column="name" property="name" />
+        <result column="chapter_file" property="chapterFile" />
+        <result column="version" property="version" />
+        <result column="chapter_id" property="chapterId" />
+        <result column="course_id" property="courseId" />
+    </resultMap>
+
+    <!-- 通用查询结果列 -->
+    <sql id="Base_Column_List">
+        id, name, chapter_file, version, chapter_id, course_id
+    </sql>
+
+</mapper>

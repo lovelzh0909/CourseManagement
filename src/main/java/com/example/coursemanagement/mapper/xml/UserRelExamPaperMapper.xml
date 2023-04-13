@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.example.coursemanagement.mapper.UserRelExamPaperMapper">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="com.example.coursemanagement.entity.UserRelExamPaper">
+        <id column="id" property="id" />
+        <result column="user_id" property="userId" />
+        <result column="exam_paper_id" property="examPaperId" />
+        <result column="version" property="version" />
+    </resultMap>
+
+    <!-- 通用查询结果列 -->
+    <sql id="Base_Column_List">
+        id, user_id, exam_paper_id, version
+    </sql>
+
+</mapper>

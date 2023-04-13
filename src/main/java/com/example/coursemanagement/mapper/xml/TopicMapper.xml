@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.example.coursemanagement.mapper.TopicMapper">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="com.example.coursemanagement.entity.Topic">
+        <id column="id" property="id" />
+        <result column="topic_name" property="topicName" />
+        <result column="topic_content" property="topicContent" />
+        <result column="type" property="type" />
+        <result column="user_id" property="userId" />
+        <result column="like_num" property="likeNum" />
+        <result column="version" property="version" />
+    </resultMap>
+
+    <!-- 通用查询结果列 -->
+    <sql id="Base_Column_List">
+        id, topic_name, topic_content, type, user_id, like_num, version
+    </sql>
+
+</mapper>
