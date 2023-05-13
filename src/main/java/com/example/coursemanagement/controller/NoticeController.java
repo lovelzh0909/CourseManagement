@@ -18,7 +18,7 @@ import org.springframework.web.bind.annotation.RestController;
 public class NoticeController {
     @RequestMapping
     public String ppp(){
-        System.out.println("welcome");
+        System.out.println("hello");
         return "welcome";
     }
 }
