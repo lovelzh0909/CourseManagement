@@ -18,7 +18,7 @@ import org.springframework.web.bind.annotation.RestController;
 public class QuestionController {
     @RequestMapping
     public String ppp(){
-        System.out.println("3");
+        System.out.println("4");
         return "welcome";
     }
 }
