@@ -54,7 +54,7 @@ public class UserController {
             return CommonReturnType.create(null,"用户名已存在");
         }
         else {
-            if(StringUtils.isEmptyOrWhitespaceOnly(one.getPhone()) || StringUtils.isEmptyOrWhitespaceOnly(one.getPassword())){
+            if(StringUtils.isEmptyOrWhitespaceOnly(user.getPhone()) || StringUtils.isEmptyOrWhitespaceOnly(user.getPassword())){
                 return CommonReturnType.create(null,"用户名或密码不能为空");
             }
             else{
