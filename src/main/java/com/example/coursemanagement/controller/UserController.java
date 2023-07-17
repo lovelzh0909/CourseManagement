@@ -3,6 +3,7 @@ package com.example.coursemanagement.controller;
 
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import com.example.coursemanagement.entity.User;
+import com.example.coursemanagement.response.AvatarReturnType;
 import com.example.coursemanagement.response.CommonReturnType;
 import com.example.coursemanagement.service.UserService;
 import com.mysql.cj.util.StringUtils;
@@ -42,7 +43,7 @@ public class UserController {
                         .eq("password", user.getPassword()));
 
         if(one!=null){
-            return CommonReturnType.create(null);
+            return CommonReturnType.create(one.getId());
         }
         return CommonReturnType.create(null,"用户名或密码错误");
     }
@@ -62,6 +63,12 @@ public class UserController {
             }
         }
         return CommonReturnType.create(null);
+    }
+
+    @PostMapping("/avatar")
+    public AvatarReturnType getAvatar(@RequestBody User user){
+        User one = userService.getOne((new QueryWrapper<User>().eq("id",user.getId())));
+        return AvatarReturnType.create(one.getRole());
     }
 }
 
